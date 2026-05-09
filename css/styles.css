@@ -1,0 +1,487 @@
+/* Assignment request: Design a responsive SVU activities website using a clear color identity, readable fonts, Bootstrap-friendly spacing, and image placeholders. */
+:root {
+  --svu-blue: #134b7c;
+  --svu-teal: #0f8b8d;
+  --svu-gold: #f2b705;
+  --svu-red: #c23b22;
+  --ink: #18202b;
+  --muted: #5b6674;
+  --line: #d8e0e8;
+  --surface: #ffffff;
+  --page: #f4f7fb;
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+body.dark-mode {
+  --svu-blue: #78b9f2;
+  --svu-teal: #5fd4d0;
+  --svu-gold: #ffd66b;
+  --svu-red: #f06a55;
+  --ink: #eef5ff;
+  --muted: #c9d5e5;
+  --line: #3a506b;
+  --surface: #162234;
+  --page: #0b1422;
+}
+
+.site-header .navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--svu-blue);
+  font-weight: 800;
+}
+
+.brand img {
+  width: 54px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff !important;
+  background: var(--svu-blue);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+  color: var(--svu-blue);
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: transparent;
+  border: 1px solid var(--svu-blue);
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  color: #fff;
+  background: var(--svu-blue);
+}
+
+.hero-band {
+  padding: 4rem 0;
+  color: #fff;
+  background: linear-gradient(135deg, var(--svu-blue), var(--svu-teal));
+}
+
+.hero-band h1,
+.section-title h1,
+.section-title h2 {
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.hero-band h1 {
+  max-width: 760px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.hero-band .lead {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.eyebrow {
+  color: var(--svu-gold);
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.6rem;
+}
+
+.section-block {
+  padding: 3.5rem 0;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.team-panel,
+.content-panel,
+.filter-panel,
+.slider-box,
+.event-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(19, 75, 124, 0.08);
+}
+
+.team-panel,
+.content-panel,
+.filter-panel,
+.slider-box {
+  padding: 1.5rem;
+}
+
+.team-panel ul {
+  margin-bottom: 0;
+  padding-right: 1.2rem;
+}
+
+.team-panel,
+.team-panel li {
+  color: var(--ink);
+}
+
+.team-panel p {
+  color: var(--muted);
+}
+
+.team-panel strong {
+  color: var(--svu-blue);
+}
+
+.btn-primary-svu {
+  color: #fff;
+  background: var(--svu-blue);
+  border: 1px solid var(--svu-blue);
+}
+
+.btn-primary-svu:hover {
+  color: #fff;
+  background: #0d3b64;
+}
+
+.btn-outline-svu {
+  color: var(--svu-blue);
+  background: var(--surface);
+  border: 1px solid var(--svu-blue);
+}
+
+.btn-outline-svu:hover {
+  color: #fff;
+  background: var(--svu-teal);
+  border-color: var(--svu-teal);
+}
+
+.badge-svu,
+.category-badge,
+.meta-list span {
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.badge-svu {
+  color: #10233b;
+  background: var(--svu-gold);
+}
+
+.category-badge,
+.meta-list span {
+  color: #fff;
+  background: var(--svu-teal);
+  padding: 0.55rem 0.85rem;
+}
+
+.image-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+  font-weight: 800;
+  background: repeating-linear-gradient(135deg, #fff, #fff 16px, #eef4f8 16px, #eef4f8 32px);
+  border: 2px dashed #adc0cf;
+  border-radius: 8px;
+}
+
+.image-slot-wide {
+  min-height: 320px;
+}
+
+.image-slot-medium {
+  min-height: 260px;
+}
+
+.image-slot-card {
+  min-height: 190px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: var(--line);
+  border-radius: 8px 8px 0 0;
+}
+
+.image-slot-small {
+  min-height: 160px;
+}
+
+.image-slot-map {
+  min-height: 230px;
+}
+
+.image-slot-profile {
+  min-height: 170px;
+  border-radius: 8px 8px 0 0;
+}
+
+.site-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.form-control,
+.form-select {
+  color: var(--ink);
+  background-color: var(--surface);
+  border-color: var(--line);
+}
+
+.form-control::placeholder {
+  color: var(--muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--ink);
+  background-color: var(--surface);
+  border-color: var(--svu-teal);
+  box-shadow: 0 0 0 0.2rem rgba(15, 139, 141, 0.2);
+}
+
+.site-image-wide {
+  height: clamp(260px, 34vw, 420px);
+}
+
+.site-image-medium {
+  height: 260px;
+}
+
+.site-image-card {
+  height: 190px;
+  border-width: 0 0 1px;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.site-image-small {
+  height: 160px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.site-image-map {
+  height: 230px;
+}
+
+.site-image-profile {
+  height: 170px;
+  border-radius: 8px 8px 0 0;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.feature-slide {
+  display: none;
+}
+
+.feature-slide.is-active {
+  display: block;
+}
+
+.slider-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.event-card {
+  overflow: hidden;
+}
+
+.event-card h2,
+.event-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  color: #fff;
+  background: #10233b;
+}
+
+body.dark-mode .hero-band {
+  background: linear-gradient(135deg, #0c2740, #0f4d57);
+}
+
+body.dark-mode .brand,
+body.dark-mode .nav-link,
+body.dark-mode .section-title h1,
+body.dark-mode .section-title h2,
+body.dark-mode .event-card h2,
+body.dark-mode .event-card h3,
+body.dark-mode .content-panel h2,
+body.dark-mode .team-panel h2,
+body.dark-mode label,
+body.dark-mode strong {
+  color: var(--ink);
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active,
+body.dark-mode .btn-primary-svu {
+  color: #07111f !important;
+  background: var(--svu-gold);
+  border-color: var(--svu-gold);
+}
+
+body.dark-mode .theme-toggle,
+body.dark-mode .btn-outline-svu {
+  color: var(--svu-gold);
+  border-color: var(--svu-gold);
+}
+
+body.dark-mode .theme-toggle:hover,
+body.dark-mode .btn-outline-svu:hover {
+  color: #07111f;
+  background: var(--svu-gold);
+  border-color: var(--svu-gold);
+}
+
+body.dark-mode .event-card p,
+body.dark-mode .content-panel p,
+body.dark-mode .team-panel p,
+body.dark-mode .site-footer p,
+body.dark-mode li {
+  color: var(--muted);
+}
+
+body.dark-mode .team-panel,
+body.dark-mode .team-panel li {
+  color: var(--ink);
+}
+
+body.dark-mode .team-panel p {
+  color: var(--muted);
+}
+
+body.dark-mode .team-panel strong {
+  color: var(--svu-gold);
+}
+
+body.dark-mode .badge-svu {
+  color: #07111f;
+  background: var(--svu-gold);
+}
+
+body.dark-mode .category-badge,
+body.dark-mode .meta-list span {
+  color: #07111f;
+  background: var(--svu-teal);
+}
+
+body.dark-mode .alert-success {
+  color: #d7ffe8;
+  background: #123d2a;
+  border-color: #236946;
+}
+
+body.dark-mode .alert-danger {
+  color: #ffe1de;
+  background: #4a1e1a;
+  border-color: #7a332d;
+}
+
+body.dark-mode .alert-warning {
+  color: #fff0c2;
+  background: #4a3a12;
+  border-color: #7a6120;
+}
+
+body.dark-mode .scroll-top-btn {
+  color: #07111f;
+  background: var(--svu-gold);
+  border-color: var(--svu-gold);
+}
+
+body.dark-mode .site-footer {
+  background: #08101d;
+}
+
+body.dark-mode .modal-content {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.site-footer h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.site-footer p {
+  margin-bottom: 0.4rem;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  background: var(--svu-blue);
+  border: 1px solid var(--svu-blue);
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.scroll-top-btn.is-visible {
+  display: inline-flex;
+}
+
+@media (max-width: 991.98px) {
+  .hero-band,
+  .section-block {
+    padding: 2.5rem 0;
+  }
+
+  .brand img {
+    width: 46px;
+  }
+}
